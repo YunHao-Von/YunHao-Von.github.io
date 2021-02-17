@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="#第二篇推送-多信息融合股价波动计量研究(基于tushare与飞桨预训练模型)-2021-02-17github项目地址：https:&#x2F;&#x2F;github.com&#x2F;YunHao-Von&#x2F;Finance_With_Text   内 容 摘 要 本文先通过数据爬取从东方股吧爬取了四家来自不同行业的公司舆情数据，然后通过Bi-LSTM（双向长短期记忆网络）对文本数据进行分析得到每日情绪指标。得到情绪指标后我">
+  <meta name="description" content="#第二篇推送-多信息融合股价波动计量研究(基于tushare与飞桨预训练模型)-2021-02-17github项目地址：https:&#x2F;&#x2F;github.com&#x2F;YunHao-Von&#x2F;Finance_With_Text鸣谢tushare（本人tushareID：407726）与百度飞桨内 容 摘 要 本文先通过数据爬取从东方股吧爬取了四家来自不同行业的公司舆情数据，然后通过Bi-LSTM（双向长短期">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2021/02/17/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%8E%A8%E9%80%81-%E9%87%8F%E5%8C%96%E8%AE%BA%E6%96%87-%E5%A4%9A%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88%E8%82%A1%E4%BB%B7%E6%B3%A2%E5%8A%A8%E7%A0%94%E7%A9%B6%EF%BC%88%E5%9F%BA%E4%BA%8Etushare%E4%B8%8E%E9%A3%9E%E6%A1%A8%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%89-2021-02-17/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#第二篇推送-多信息融合股价波动计量研究(基于tushare与飞桨预训练模型)-2021-02-17github项目地址：https:&#x2F;&#x2F;github.com&#x2F;YunHao-Von&#x2F;Finance_With_Text   内 容 摘 要 本文先通过数据爬取从东方股吧爬取了四家来自不同行业的公司舆情数据，然后通过Bi-LSTM（双向长短期记忆网络）对文本数据进行分析得到每日情绪指标。得到情绪指标后我">
+<meta property="og:description" content="#第二篇推送-多信息融合股价波动计量研究(基于tushare与飞桨预训练模型)-2021-02-17github项目地址：https:&#x2F;&#x2F;github.com&#x2F;YunHao-Von&#x2F;Finance_With_Text鸣谢tushare（本人tushareID：407726）与百度飞桨内 容 摘 要 本文先通过数据爬取从东方股吧爬取了四家来自不同行业的公司舆情数据，然后通过Bi-LSTM（双向长短期">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/02/17/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%8E%A8%E9%80%81-%E9%87%8F%E5%8C%96%E8%AE%BA%E6%96%87-%E5%A4%9A%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88%E8%82%A1%E4%BB%B7%E6%B3%A2%E5%8A%A8%E7%A0%94%E7%A9%B6%EF%BC%88%E5%9F%BA%E4%BA%8Etushare%E4%B8%8E%E9%A3%9E%E6%A1%A8%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%89-2021-02-17/media/531bf3c5fe38140d852556d2904f4737.jpeg">
 <meta property="og:image" content="http://example.com/2021/02/17/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%8E%A8%E9%80%81-%E9%87%8F%E5%8C%96%E8%AE%BA%E6%96%87-%E5%A4%9A%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88%E8%82%A1%E4%BB%B7%E6%B3%A2%E5%8A%A8%E7%A0%94%E7%A9%B6%EF%BC%88%E5%9F%BA%E4%BA%8Etushare%E4%B8%8E%E9%A3%9E%E6%A1%A8%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%89-2021-02-17/media/e478f957aa2befcd5924237638fa0c77.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="http://example.com/2021/02/17/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%8E%A8%E9%80%81-%E9%87%8F%E5%8C%96%E8%AE%BA%E6%96%87-%E5%A4%9A%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88%E8%82%A1%E4%BB%B7%E6%B3%A2%E5%8A%A8%E7%A0%94%E7%A9%B6%EF%BC%88%E5%9F%BA%E4%BA%8Etushare%E4%B8%8E%E9%A3%9E%E6%A1%A8%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%89-2021-02-17/media/d5a982a5558924832b93a567bff03ffc.png">
 <meta property="og:image" content="http://example.com/2021/02/17/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%8E%A8%E9%80%81-%E9%87%8F%E5%8C%96%E8%AE%BA%E6%96%87-%E5%A4%9A%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88%E8%82%A1%E4%BB%B7%E6%B3%A2%E5%8A%A8%E7%A0%94%E7%A9%B6%EF%BC%88%E5%9F%BA%E4%BA%8Etushare%E4%B8%8E%E9%A3%9E%E6%A1%A8%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%89-2021-02-17/media/26fa74d15a47b48c629eeb136e9f3e56.png">
 <meta property="article:published_time" content="2021-02-17T04:52:39.638Z">
-<meta property="article:modified_time" content="2021-02-17T06:13:08.142Z">
+<meta property="article:modified_time" content="2021-02-17T06:18:57.554Z">
 <meta property="article:author" content="Yun Hao">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/02/17/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%8E%A8%E9%80%81-%E9%87%8F%E5%8C%96%E8%AE%BA%E6%96%87-%E5%A4%9A%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88%E8%82%A1%E4%BB%B7%E6%B3%A2%E5%8A%A8%E7%A0%94%E7%A9%B6%EF%BC%88%E5%9F%BA%E4%BA%8Etushare%E4%B8%8E%E9%A3%9E%E6%A1%A8%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%EF%BC%89-2021-02-17/media/531bf3c5fe38140d852556d2904f4737.jpeg">
@@ -215,8 +215,7 @@
     
   <div class="article-entry" itemprop="articleBody">
     
-    <p>#第二篇推送-多信息融合股价波动计量研究(基于tushare与飞桨预训练模型)-2021-02-17<br><strong>github项目地址：<a target="_blank" rel="noopener" href="https://github.com/YunHao-Von/Finance_With_Text">https://github.com/YunHao-Von/Finance_With_Text</a></strong>  </p>
-<p><strong>内 容 摘 要</strong></p>
+    <p>#第二篇推送-多信息融合股价波动计量研究(基于tushare与飞桨预训练模型)-2021-02-17<br><strong>github项目地址：<a target="_blank" rel="noopener" href="https://github.com/YunHao-Von/Finance_With_Text">https://github.com/YunHao-Von/Finance_With_Text</a></strong><br><strong>鸣谢tushare（本人tushareID：407726）与百度飞桨</strong><br><strong>内 容 摘 要</strong></p>
 <p>本文先通过数据爬取从东方股吧爬取了四家来自不同行业的公司舆情数据，然后通过Bi-LSTM（双向长短期记忆网络）对文本数据进行分析得到每日情绪指标。得到情绪指标后我们结合了从Tushare接口获取的其各自的日线数据，并且通过日线数据构造了移动平均、KDJ、MACD等指标，然后针对二者进行融合做出计量探究，经过选择和节选后得到了七个指标，并且由决策树模型给出了建议。</p>
 <p><strong>关键词：</strong>金融计量 数据挖掘 深度学习 决策树 数据爬取 共线性研究  tushare</p>
 <p><strong>目  录</strong></p>
